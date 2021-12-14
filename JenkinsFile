@@ -22,7 +22,9 @@ pipeline {
 
 
         stage ('Deployment Stage') {
-           echo "deploying"
+            steps {
+                echo "deploying"
+           }
         }
     }
 }
