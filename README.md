@@ -1,0 +1,3 @@
+# MavenDemoProject
+
+SAMPLE MAVEN PROJECT FOR JENKINS
