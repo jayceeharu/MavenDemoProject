@@ -3,31 +3,34 @@ pipeline {
     
     tools {
 		maven 'Maven-3.8.4'
-	
 	}
 
     stages {
-        stage ('Compile Stage') {
-
-            steps {
-                
-                  bat  'mvn clean compile'
-                }
+        stage ('Building Stage') {
+            steps {          
             
+            	  echo "Building..."
+                  bat  'mvn clean compile'
+                  
+                  
+                }        
         }
 
         stage ('Testing Stage') {
-
             steps {
+            
+            		echo "Running Test..."
                     bat  'mvn test'
+                    
                 }
             
         }
 
-
         stage ('Deployment Stage') {
             steps {
-                echo "deploying"
+            
+               		echo "Deploying..."
+               		bat 'mvn deploy'
            }
         }
     }
